@@ -1,84 +1,71 @@
-<h1 align="center">Welcome to <Meta Universe> 👋</h1>
+<h1 align="center">Welcome to Foxes_vs_Rabbits 👋</h1>
+
+### 🏠 [Project Structure](<%= projectHomepage %>)
 
 
-### ✨ [Demo](<%= projectDemoUrl %>)
-<% } -%>
-<% if (projectPrerequisites && projectPrerequisites.length) { -%>
-
-## Prerequisites
-
-<% projectPrerequisites.map(({ name, value }) => { -%>
-- <%= name %> <%= value %>
-<% }) -%>
-<% } -%>
-<% if (installCommand) { -%>
+ Engine
+  - game_world
+     - world_core.py  
+     - world_manager.py
+   
+  - objects
+    - entity.py
+    - rabbit.py
+    
+ - migrations  
+ - models.py  
+ 
+ 
+Foxes_vs_Rabbits
+  - core django
+  
+REST_API
+  - consumers.py
+  - models.py
+  - routing.py
+  - views.py
+ 
+compose
+  - development  
+  - pre-release  
+  - release  
+  - testing
+ 
+static/Foxes_vs_Rabbits
+templates/rest_framework_swagger
+  
+#### Docs<a href="URL">
 
 ## Install
 
 ```sh
-<%= installCommand %>
+<%= тут кароче будет фул сетап, детка %>
+<%= тут кароче будет фул сетап, детка %>
+<%= тут кароче будет фул сетап, детка %>
+
 ```
-<% } -%>
-<% if (usage) { -%>
 
 ## Usage
 
 ```sh
 <%= usage %>
 ```
-<% } -%>
-<% if (testCommand) { -%>
+
+## Configuration
+```sh
+<%= testCommand %>
+```
+
+## DB
+
+```sh
+<%= testCommand %>
+```
 
 ## Run tests
 
 ```sh
 <%= testCommand %>
 ```
-<% } -%>
-<% if (authorName || authorTwitterUsername || authorGithubUsername) { -%>
 
-## Author
-<% if (authorName) { %>
-👤 **<%= authorName %>**
-<% } %>
-<% if (authorWebsite) { -%>
-* Website: <%= authorWebsite %>
-<% } -%>
-<% if (authorTwitterUsername) { -%>
-* Twitter: [@<%= authorTwitterUsername %>](https://twitter.com/<%= authorTwitterUsername %>)
-<% } -%>
-<% if (authorGithubUsername) { -%>
-* GitHub: [@<%= authorGithubUsername %>](https://github.com/<%= authorGithubUsername %>)
-<% } -%>
-<% if (authorLinkedInUsername) { -%>
-* LinkedIn: [@<%= authorLinkedInUsername %>](https://linkedin.com/in/<%= authorLinkedInUsername %>)
-<% } -%>
-<% } -%>
-<% if (issuesUrl) { -%>
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](<%= issuesUrl %>). <%= contributingUrl ? `You can also take a look at the [contributing guide](${contributingUrl}).` : '' %>
-<% } -%>
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-<% if (authorPatreonUsername) { -%>
-
-<a href="https://www.patreon.com/<%= authorPatreonUsername %>">
-  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
-<% } -%>
-<% if (licenseName && licenseUrl) { -%>
-
-## 📝 License
-
-<% if (authorName && authorGithubUsername) { -%>
-Copyright © <%= currentYear %> [<%= authorName %>](https://github.com/<%= authorGithubUsername %>).<br />
-<% } -%>
-This project is [<%= licenseName %>](<%= licenseUrl %>) licensed.
-<% } -%>
-
-***
-<%- include('footer.md'); -%>
