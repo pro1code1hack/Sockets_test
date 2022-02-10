@@ -1,14 +1,5 @@
 <h1 align="center">Welcome to <Meta Universe> 👋</h1>
-<p>
-<% if (isProjectOnNpm) { -%>
-  <a href="https://www.npmjs.com/package/<%= projectName %>" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/<%= projectName %>.svg">
-  </a>
-<% } -%>
-<% if (projectVersion && !isProjectOnNpm) { -%>
-  <img alt="Version" src="https://img.shields.io/badge/version-<%= projectVersion %>-blue.svg?cacheSeconds=2592000" />
-<% } -%>
-<% if (projectPrerequisites) { -%>
+<% if (projectPrerequisites) { -%>= projectName %
 <% projectPrerequisites.map(({ name, value }) => { -%>
   <img src="https://img.shields.io/badge/<%= name %>-<%= encodeURIComponent(value) %>-blue.svg" />
 <% }) -%>
